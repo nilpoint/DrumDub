@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MediaPlayer
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MPMediaPickerControllerDelegate {
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -19,7 +20,14 @@ class ViewController: UIViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
+  
+  @IBAction func selectTrack(sender: AnyObject!) {
+    let picker = MPMediaPickerController(mediaTypes: .AnyAudio)
+    picker.delegate = self
+    picker.allowsPickingMultipleItems = false
+    picker.prompt = "Choose a song"
+    presentViewController(picker, animated: true, completion: nil)
+  }
 
 }
 
