@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		528413271B9EB17C003DE8A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528413261B9EB17C003DE8A7 /* AppDelegate.swift */; };
+		528413291B9EB17C003DE8A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528413281B9EB17C003DE8A7 /* ViewController.swift */; };
+		5284132C1B9EB17C003DE8A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5284132A1B9EB17C003DE8A7 /* Main.storyboard */; };
+		5284132E1B9EB17C003DE8A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5284132D1B9EB17C003DE8A7 /* Images.xcassets */; };
+		528413311B9EB17C003DE8A7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5284132F1B9EB17C003DE8A7 /* LaunchScreen.xib */; };
+		5284133D1B9EB17C003DE8A7 /* DrumDubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284133C1B9EB17C003DE8A7 /* DrumDubTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		528413371B9EB17C003DE8A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 528413191B9EB17C003DE8A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 528413201B9EB17C003DE8A7;
+			remoteInfo = DrumDub;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		528413211B9EB17C003DE8A7 /* DrumDub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrumDub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		528413251B9EB17C003DE8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		528413261B9EB17C003DE8A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		528413281B9EB17C003DE8A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5284132B1B9EB17C003DE8A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5284132D1B9EB17C003DE8A7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		528413301B9EB17C003DE8A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		528413361B9EB17C003DE8A7 /* DrumDubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrumDubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5284133B1B9EB17C003DE8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5284133C1B9EB17C003DE8A7 /* DrumDubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumDubTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5284131E1B9EB17C003DE8A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528413331B9EB17C003DE8A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		528413181B9EB17C003DE8A7 = {
+			isa = PBXGroup;
+			children = (
+				528413231B9EB17C003DE8A7 /* DrumDub */,
+				528413391B9EB17C003DE8A7 /* DrumDubTests */,
+				528413221B9EB17C003DE8A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		528413221B9EB17C003DE8A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				528413211B9EB17C003DE8A7 /* DrumDub.app */,
+				528413361B9EB17C003DE8A7 /* DrumDubTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		528413231B9EB17C003DE8A7 /* DrumDub */ = {
+			isa = PBXGroup;
+			children = (
+				528413261B9EB17C003DE8A7 /* AppDelegate.swift */,
+				528413281B9EB17C003DE8A7 /* ViewController.swift */,
+				5284132A1B9EB17C003DE8A7 /* Main.storyboard */,
+				5284132D1B9EB17C003DE8A7 /* Images.xcassets */,
+				5284132F1B9EB17C003DE8A7 /* LaunchScreen.xib */,
+				528413241B9EB17C003DE8A7 /* Supporting Files */,
+			);
+			path = DrumDub;
+			sourceTree = "<group>";
+		};
+		528413241B9EB17C003DE8A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				528413251B9EB17C003DE8A7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		528413391B9EB17C003DE8A7 /* DrumDubTests */ = {
+			isa = PBXGroup;
+			children = (
+				5284133C1B9EB17C003DE8A7 /* DrumDubTests.swift */,
+				5284133A1B9EB17C003DE8A7 /* Supporting Files */,
+			);
+			path = DrumDubTests;
+			sourceTree = "<group>";
+		};
+		5284133A1B9EB17C003DE8A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5284133B1B9EB17C003DE8A7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		528413201B9EB17C003DE8A7 /* DrumDub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 528413401B9EB17C003DE8A7 /* Build configuration list for PBXNativeTarget "DrumDub" */;
+			buildPhases = (
+				5284131D1B9EB17C003DE8A7 /* Sources */,
+				5284131E1B9EB17C003DE8A7 /* Frameworks */,
+				5284131F1B9EB17C003DE8A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrumDub;
+			productName = DrumDub;
+			productReference = 528413211B9EB17C003DE8A7 /* DrumDub.app */;
+			productType = "com.apple.product-type.application";
+		};
+		528413351B9EB17C003DE8A7 /* DrumDubTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 528413431B9EB17C003DE8A7 /* Build configuration list for PBXNativeTarget "DrumDubTests" */;
+			buildPhases = (
+				528413321B9EB17C003DE8A7 /* Sources */,
+				528413331B9EB17C003DE8A7 /* Frameworks */,
+				528413341B9EB17C003DE8A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				528413381B9EB17C003DE8A7 /* PBXTargetDependency */,
+			);
+			name = DrumDubTests;
+			productName = DrumDubTests;
+			productReference = 528413361B9EB17C003DE8A7 /* DrumDubTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		528413191B9EB17C003DE8A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = nilpoint.sample;
+				TargetAttributes = {
+					528413201B9EB17C003DE8A7 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					528413351B9EB17C003DE8A7 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 528413201B9EB17C003DE8A7;
+					};
+				};
+			};
+			buildConfigurationList = 5284131C1B9EB17C003DE8A7 /* Build configuration list for PBXProject "DrumDub" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 528413181B9EB17C003DE8A7;
+			productRefGroup = 528413221B9EB17C003DE8A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				528413201B9EB17C003DE8A7 /* DrumDub */,
+				528413351B9EB17C003DE8A7 /* DrumDubTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5284131F1B9EB17C003DE8A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5284132C1B9EB17C003DE8A7 /* Main.storyboard in Resources */,
+				528413311B9EB17C003DE8A7 /* LaunchScreen.xib in Resources */,
+				5284132E1B9EB17C003DE8A7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528413341B9EB17C003DE8A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5284131D1B9EB17C003DE8A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528413291B9EB17C003DE8A7 /* ViewController.swift in Sources */,
+				528413271B9EB17C003DE8A7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528413321B9EB17C003DE8A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5284133D1B9EB17C003DE8A7 /* DrumDubTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		528413381B9EB17C003DE8A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 528413201B9EB17C003DE8A7 /* DrumDub */;
+			targetProxy = 528413371B9EB17C003DE8A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5284132A1B9EB17C003DE8A7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5284132B1B9EB17C003DE8A7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5284132F1B9EB17C003DE8A7 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				528413301B9EB17C003DE8A7 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5284133E1B9EB17C003DE8A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5284133F1B9EB17C003DE8A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		528413411B9EB17C003DE8A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DrumDub/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		528413421B9EB17C003DE8A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DrumDub/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		528413441B9EB17C003DE8A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DrumDubTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrumDub.app/DrumDub";
+			};
+			name = Debug;
+		};
+		528413451B9EB17C003DE8A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DrumDubTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrumDub.app/DrumDub";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5284131C1B9EB17C003DE8A7 /* Build configuration list for PBXProject "DrumDub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5284133E1B9EB17C003DE8A7 /* Debug */,
+				5284133F1B9EB17C003DE8A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		528413401B9EB17C003DE8A7 /* Build configuration list for PBXNativeTarget "DrumDub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528413411B9EB17C003DE8A7 /* Debug */,
+				528413421B9EB17C003DE8A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		528413431B9EB17C003DE8A7 /* Build configuration list for PBXNativeTarget "DrumDubTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				528413441B9EB17C003DE8A7 /* Debug */,
+				528413451B9EB17C003DE8A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 528413191B9EB17C003DE8A7 /* Project object */;
+}
