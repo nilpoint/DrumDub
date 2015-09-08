@@ -16,10 +16,36 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate {
       musicPlayer_Lazy = MPMusicPlayerController()
       musicPlayer_Lazy?.shuffleMode = .Off
       musicPlayer_Lazy?.repeatMode = .None
+      
+      let center = NSNotificationCenter.defaultCenter()
+      center.addObserver(self, selector: "playbackStateDidChange:", name: MPMusicPlayerControllerPlaybackStateDidChangeNotification, object: musicPlayer_Lazy)
+      
+      musicPlayer_Lazy!.beginGeneratingPlaybackNotifications()
     }
     return musicPlayer_Lazy!
   }
   private var musicPlayer_Lazy: MPMusicPlayerController?
+  
+  @IBOutlet var playButton: UIBarButtonItem!
+  @IBOutlet var pauseButton: UIBarButtonItem!
+  
+  // MARK - User Action
+  
+  @IBAction func selectTrack(sender: AnyObject!) {
+    let picker = MPMediaPickerController(mediaTypes: .AnyAudio)
+    picker.delegate = self
+    picker.allowsPickingMultipleItems = false
+    picker.prompt = "Choose a song"
+    presentViewController(picker, animated: true, completion: nil)
+  }
+  
+  @IBAction func play(sender: AnyObject!) {
+    musicPlayer.play()
+  }
+  
+  @IBAction func pause(sender: AnyObject!) {
+    musicPlayer.stop()
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -29,6 +55,13 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
+  }
+  
+  // MARK - Notification
+  func playbackStateDidChange(notification: NSNotification) {
+    let playing = (musicPlayer.playbackState == .Playing)
+    playButton!.enabled = !playing
+    pauseButton!.enabled = playing
   }
   
   // MARK - MPMediaPickerControllerDelegate
@@ -45,16 +78,5 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate {
   func mediaPickerDidCancel(mediaPicker: MPMediaPickerController!) {
     dismissViewControllerAnimated(true, completion: nil)
   }
-  
-  // MARK - User Action
-  
-  @IBAction func selectTrack(sender: AnyObject!) {
-    let picker = MPMediaPickerController(mediaTypes: .AnyAudio)
-    picker.delegate = self
-    picker.allowsPickingMultipleItems = false
-    picker.prompt = "Choose a song"
-    presentViewController(picker, animated: true, completion: nil)
-  }
-
 }
 

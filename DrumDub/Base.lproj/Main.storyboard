@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
@@ -16,9 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h3K-sc-ACI">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3K-sc-ACI">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="7nf-DQ-8xL"/>
+                                    <barButtonItem enabled="NO" style="plain" systemItem="play" id="6qH-fg-w7I">
+                                        <connections>
+                                            <action selector="play:" destination="BYZ-38-t0r" id="UKq-pC-b8B"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem enabled="NO" style="plain" systemItem="pause" id="A68-fx-Pog">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="fLH-eO-J77"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="k6M-rt-ELL"/>
                                     <barButtonItem title="Song" id="mOZ-L1-3jr">
                                         <connections>
                                             <action selector="selectTrack:" destination="BYZ-38-t0r" id="YhF-HV-lQA"/>
@@ -28,7 +41,17 @@
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="h3K-sc-ACI" secondAttribute="trailing" id="CHs-yp-DqW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h3K-sc-ACI" secondAttribute="bottom" id="Ga9-6q-mDc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h3K-sc-ACI" secondAttribute="bottom" id="Zm3-c5-C0B"/>
+                            <constraint firstItem="h3K-sc-ACI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tLq-m8-Mro"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="A68-fx-Pog" id="i8e-0H-MWI"/>
+                        <outlet property="playButton" destination="6qH-fg-w7I" id="zWC-ws-Zrb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
