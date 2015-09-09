@@ -19,6 +19,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate {
       
       let center = NSNotificationCenter.defaultCenter()
       center.addObserver(self, selector: "playbackStateDidChange:", name: MPMusicPlayerControllerPlaybackStateDidChangeNotification, object: musicPlayer_Lazy)
+      center.addObserver(self, selector: "playingItemDidChange:", name: MPMusicPlayerControllerNowPlayingItemDidChangeNotification, object: musicPlayer_Lazy)
       
       musicPlayer_Lazy!.beginGeneratingPlaybackNotifications()
     }
@@ -28,6 +29,10 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate {
   
   @IBOutlet var playButton: UIBarButtonItem!
   @IBOutlet var pauseButton: UIBarButtonItem!
+  @IBOutlet var albumView: UIImageView!
+  @IBOutlet var songLabel: UILabel!
+  @IBOutlet var albumLabel: UILabel!
+  @IBOutlet var artistLabel: UILabel!
   
   // MARK - User Action
   
@@ -62,6 +67,23 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate {
     let playing = (musicPlayer.playbackState == .Playing)
     playButton!.enabled = !playing
     pauseButton!.enabled = playing
+  }
+  
+  func playingItemDidChange(notification: NSNotification) {
+      let nowPlaying = musicPlayer.nowPlayingItem
+      
+      var albumImage: UIImage!
+      if let artwork = nowPlaying?.valueForProperty(MPMediaItemPropertyArtwork) as? MPMediaItemArtwork {
+        albumImage = artwork.imageWithSize(albumView.bounds.size)
+      }
+      if albumImage == nil {
+        albumImage = UIImage(named: "noartwork")
+      }
+      albumView.image = albumImage
+      
+      songLabel.text = nowPlaying?.valueForProperty(MPMediaItemPropertyTitle) as? String
+      albumLabel.text = nowPlaying?.valueForProperty(MPMediaItemPropertyAlbumTitle) as? String
+      artistLabel.text = nowPlaying?.valueForProperty(MPMediaItemPropertyArtist) as? String
   }
   
   // MARK - MPMediaPickerControllerDelegate
