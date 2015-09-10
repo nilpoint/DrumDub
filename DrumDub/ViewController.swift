@@ -57,7 +57,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate {
   }
   
   @IBAction func bang(sender: AnyObject!) {
-    if let button = sender as? AnyObject {
+    if let button = sender as? UIButton {
       let index = button.tag - 1
       if index >= 0 && index < players.count {
         let player = players[index]
@@ -71,6 +71,8 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     activateAudioSession()
+    let center = NSNotificationCenter.defaultCenter()
+    center.addObserver(self, selector: "audioInterruption:", name: AVAudioSessionInterruptionNotification, object: nil)
   }
 
   override func didReceiveMemoryWarning() {
@@ -147,6 +149,26 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate {
     for i in 0..<soundNames.count {
       if let button = view.viewWithTag(i+1) as? UIButton {
         button.enabled = active
+      }
+    }
+  }
+  
+  func audioInterruption(notification: NSNotification) {
+    if let typeValue = notification.userInfo?[AVAudioSessionInterruptionTypeKey] as? NSNumber {
+      // Prior to Swift version 1.2 
+//      if let type = AVAudioSessionInterruptionType.fromRaw(typeValue.unsignedLongValue) {
+      // Swift version 1.2
+      if let type = AVAudioSessionInterruptionType(rawValue: typeValue.unsignedLongValue) {
+        switch type {
+        case .Began:
+          for player in players {
+            player.pause()
+          }
+          break;
+        case .Ended:
+          activateAudioSession()
+          break;
+        }
       }
     }
   }
