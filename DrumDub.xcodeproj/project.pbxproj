@@ -13,6 +13,10 @@
 		5284132E1B9EB17C003DE8A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5284132D1B9EB17C003DE8A7 /* Images.xcassets */; };
 		528413311B9EB17C003DE8A7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5284132F1B9EB17C003DE8A7 /* LaunchScreen.xib */; };
 		5284133D1B9EB17C003DE8A7 /* DrumDubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284133C1B9EB17C003DE8A7 /* DrumDubTests.swift */; };
+		52D812751BA231C400366670 /* bass.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 52DA54FB1BA10948003FEE7D /* bass.m4a */; };
+		52D812761BA231C700366670 /* maraca.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 52DA54FC1BA10948003FEE7D /* maraca.m4a */; };
+		52D812771BA231C900366670 /* snare.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 52DA54FD1BA10948003FEE7D /* snare.m4a */; };
+		52D812781BA231CC00366670 /* tambourine.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 52DA54FE1BA10948003FEE7D /* tambourine.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,7 +213,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5284132C1B9EB17C003DE8A7 /* Main.storyboard in Resources */,
+				52D812761BA231C700366670 /* maraca.m4a in Resources */,
+				52D812751BA231C400366670 /* bass.m4a in Resources */,
 				528413311B9EB17C003DE8A7 /* LaunchScreen.xib in Resources */,
+				52D812771BA231C900366670 /* snare.m4a in Resources */,
+				52D812781BA231CC00366670 /* tambourine.m4a in Resources */,
 				5284132E1B9EB17C003DE8A7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
