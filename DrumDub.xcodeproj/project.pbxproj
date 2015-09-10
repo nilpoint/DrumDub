@@ -36,6 +36,10 @@
 		528413361B9EB17C003DE8A7 /* DrumDubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrumDubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5284133B1B9EB17C003DE8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5284133C1B9EB17C003DE8A7 /* DrumDubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumDubTests.swift; sourceTree = "<group>"; };
+		52DA54FB1BA10948003FEE7D /* bass.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = bass.m4a; sourceTree = "<group>"; };
+		52DA54FC1BA10948003FEE7D /* maraca.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = maraca.m4a; sourceTree = "<group>"; };
+		52DA54FD1BA10948003FEE7D /* snare.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = snare.m4a; sourceTree = "<group>"; };
+		52DA54FE1BA10948003FEE7D /* tambourine.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = tambourine.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		528413231B9EB17C003DE8A7 /* DrumDub */ = {
 			isa = PBXGroup;
 			children = (
+				52DA54FA1BA108D1003FEE7D /* Sounds */,
 				528413261B9EB17C003DE8A7 /* AppDelegate.swift */,
 				528413281B9EB17C003DE8A7 /* ViewController.swift */,
 				5284132A1B9EB17C003DE8A7 /* Main.storyboard */,
@@ -110,6 +115,17 @@
 				5284133B1B9EB17C003DE8A7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52DA54FA1BA108D1003FEE7D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				52DA54FB1BA10948003FEE7D /* bass.m4a */,
+				52DA54FC1BA10948003FEE7D /* maraca.m4a */,
+				52DA54FD1BA10948003FEE7D /* snare.m4a */,
+				52DA54FE1BA10948003FEE7D /* tambourine.m4a */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

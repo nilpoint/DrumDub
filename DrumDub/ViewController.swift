@@ -8,6 +8,7 @@
 
 import UIKit
 import MediaPlayer
+import AVFoundation
 
 class ViewController: UIViewController, MPMediaPickerControllerDelegate {
   
@@ -26,6 +27,9 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate {
     return musicPlayer_Lazy!
   }
   private var musicPlayer_Lazy: MPMusicPlayerController?
+  
+  let soundNames = ["snare", "bass", "tambourine", "maraca"]
+  var players = [AVAudioPlayer]()
   
   @IBOutlet var playButton: UIBarButtonItem!
   @IBOutlet var pauseButton: UIBarButtonItem!
@@ -51,10 +55,22 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate {
   @IBAction func pause(sender: AnyObject!) {
     musicPlayer.stop()
   }
+  
+  @IBAction func bang(sender: AnyObject!) {
+    if let button = sender as? AnyObject {
+      let index = button.tag - 1
+      if index >= 0 && index < players.count {
+        let player = players[index]
+        player.pause()
+        player.currentTime = 0.0
+        player.play()
+      }
+    }
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    activateAudioSession()
   }
 
   override func didReceiveMemoryWarning() {
@@ -63,6 +79,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate {
   }
   
   // MARK - Notification
+  
   func playbackStateDidChange(notification: NSNotification) {
     let playing = (musicPlayer.playbackState == .Playing)
     playButton!.enabled = !playing
@@ -99,6 +116,39 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate {
   
   func mediaPickerDidCancel(mediaPicker: MPMediaPickerController!) {
     dismissViewControllerAnimated(true, completion: nil)
+  }
+  
+  // MARK - AVAudioPlayer helper
+  
+  func createAudioPlayers() {
+    destroyAudioPlayers()
+    for soundName in soundNames {
+      if let soundURL = NSBundle.mainBundle().URLForResource(soundName, withExtension: "m4a") {
+        let player = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
+        player.prepareToPlay()
+        players.append(player)
+      }
+    }
+  }
+  
+  func destroyAudioPlayers() {
+    players = []
+  }
+  
+  func activateAudioSession() {
+    let active = AVAudioSession.sharedInstance().setActive(true, error: nil)
+    if active {
+      if players.count == 0 {
+        createAudioPlayers()
+      }
+    } else {
+      destroyAudioPlayers()
+    }
+    for i in 0..<soundNames.count {
+      if let button = view.viewWithTag(i+1) as? UIButton {
+        button.enabled = active
+      }
+    }
   }
 }
 
