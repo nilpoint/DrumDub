@@ -73,6 +73,7 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate {
     activateAudioSession()
     let center = NSNotificationCenter.defaultCenter()
     center.addObserver(self, selector: "audioInterruption:", name: AVAudioSessionInterruptionNotification, object: nil)
+    center.addObserver(self, selector: "audioRouteChange:", name: AVAudioSessionRouteChangeNotification, object: nil)
   }
 
   override func didReceiveMemoryWarning() {
@@ -168,6 +169,16 @@ class ViewController: UIViewController, MPMediaPickerControllerDelegate {
         case .Ended:
           activateAudioSession()
           break;
+        }
+      }
+    }
+  }
+  
+  func audioRouteChange(notification: NSNotification) {
+    if let reasonValue = notification.userInfo?[AVAudioSessionRouteChangeReasonKey] as? NSNumber {
+      if reasonValue.unsignedLongValue == AVAudioSessionRouteChangeReason.OldDeviceUnavailable.rawValue {
+        for player in players {
+          player.pause()
         }
       }
     }
